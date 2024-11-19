@@ -19,15 +19,15 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+            move_x, move_y = -1,0
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
-            kouka_rect.move_ip((0, -1))
+            move_y = -1
         if key_lst[pg.K_DOWN]:
-            kouka_rect.move_ip((0, 1))
+            move_y = 1
         if key_lst[pg.K_RIGHT]:
-            kouka_rect.move_ip((1, 0))
-        if key_lst[pg.K_LEFT]:
-            kouka_rect.move_ip((-1, 0))
+            move_x = 1
+        kouka_rect.move_ip(move_x, move_y)
 
 
         x = -(tmr%3200)
