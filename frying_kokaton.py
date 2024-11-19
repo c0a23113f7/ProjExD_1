@@ -28,6 +28,8 @@ def main():
             move_y = 1
         if key_lst[pg.K_RIGHT]:
             move_x = 1
+        if key_lst[pg.K_LEFT]:
+            move_x = -1
         kouka_rect.move_ip(move_x, move_y)
 
 
