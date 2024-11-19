@@ -19,7 +19,8 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-            move_x, move_y = -1,0
+            move_x, move_y = -1, 0
+            
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
             move_y = -1
